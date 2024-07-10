@@ -48,8 +48,12 @@ const caesarCipher = (str, amount = 0) => {
     }
     return output;
   };
-  
+
   const reverseCipher = (sentence) => {
+    if (typeof sentence !== 'string') {
+    return '';
+    }
+    
     let words = sentence.split(' ');
     for (let i = 0; i < words.length; i++) {
       words[i] = words[i].split('').reverse().join('');
