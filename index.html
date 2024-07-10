@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Encoder</title>
+    <script src="super-encoder.js"></script>
+    <script>
+        function encodeMessage() {
+            const message = document.getElementById('message').value;
+            const encoded = encodeMessage(message);
+            document.getElementById('result').textContent = 'Encoded: ' + encoded;
+        }
+
+        function decodeMessage() {
+            const message = document.getElementById('message').value;
+            const decoded = decodeMessage(message);
+            document.getElementById('result').textContent = 'Decoded: ' + decoded;
+        }
+    </script>
+</head>
+<body>
+    <h1>Super Encoder</h1>
+    <div>
+        <label for="message">Enter your message:</label>
+        <input type="text" id="message">
+    </div>
+    <div>
+        <button onclick="encodeMessage()">Encode</button>
+        <button onclick="decodeMessage()">Decode</button>
+    </div>
+    <div id="result"></div>
+</body>
+</html>
