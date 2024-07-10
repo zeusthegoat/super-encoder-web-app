@@ -66,4 +66,4 @@ const caesarCipher = (str, amount = 0) => {
     return reverseCipher(symbolCipher(caesarCipher(str, -8)));
   };
 window.encodeMessage = encodeMessage;
-window.decodeMessage = decodeMessade;
+window.decodeMessage = decodeMessage;
